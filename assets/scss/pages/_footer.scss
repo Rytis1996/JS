@@ -1,0 +1,180 @@
+.footer {
+  @include layout;
+  margin: rem(50px) auto;
+  border-bottom: 1px solid $fontprg;
+  font-size: 0;
+  box-sizing: border-box;
+  text-align: top;
+  padding-bottom: rem(70px);
+  &__left {
+    width: 40%;
+    text-align: left;
+    display: inline-block;
+    vertical-align: top;
+    h1 {
+      font-size: rem(46px);
+      font-family: montserrat;
+      font-weight: bold;
+      color: $fontprg;
+      margin-bottom: rem(40px);
+      text-align: top;
+    }
+    p {
+      font-size: rem(15px);
+      font-family: roboto;
+      color: $fontprg;
+      display: inline-block;
+    }
+    span {
+      border-bottom: 1px solid $fontprg;
+      display: block;
+      padding: rem(20px) 0;
+      margin-top: rem(20px);
+    }
+    h2 {
+      font-size: rem(18px);
+      font-family: montserrat;
+      font-weight: bold;
+      color: $fontblack;
+      display: inline-block;
+      margin-right: rem(3px);
+    }
+    h3 {
+      display: inline-block;
+      font-size: rem(14px);
+      font-family: montserrat;
+      font-weight: 500;
+      color: $fontblack;
+    }
+    i {
+      font-size: rem(16px);
+      color: $bg-blue;
+      margin: rem(16px) rem(7px);
+    }
+    input {
+      width: 48%;
+      height: rem(40px);
+      border: 1px solid $fontprg;
+      border-right: none;
+      font-size: rem(15px);
+      font-family: roboto;
+      font-weight: 300;
+      font-style: italic;
+      color: $fontprg;
+      vertical-align: bottom;
+    }
+    button {
+      margin-top: rem(24px);
+      height: rem(40px);
+      width: 31%;
+      background-color: $bg-blue;
+      border: none;
+      color: $fontwhite;
+      font-size: rem(14px);
+      font-weight: bold;
+      font-family: montserrat;
+      text-transform: uppercase;
+    }
+    &--icons {
+      margin-bottom: rem(14px);
+    }
+    @media (max-width: rem(1199px)) {
+      padding-left: rem(30px);
+    }
+    @media (max-width: rem(850px)) {
+      display: block;
+      width: 100%;
+      margin: rem(50px) auto;
+      padding-right: rem(30px);
+    }
+  }
+  &__middle {
+    width: 35%;
+    padding-left: rem(30px);
+    display: inline-block;
+    text-align: left;
+    h2 {
+      font-size: rem(14px);
+      font-family: montserrat;
+      font-weight: bold;
+      color: $fontblack;
+      text-transform: uppercase;
+      text-align: top;
+      margin-bottom: rem(25px);
+    }
+    img {
+      margin: rem(15px) 0;
+      width: 30%;
+      vertical-align: middle;
+    }
+    &--text {
+      display: inline-block;
+      vertical-align: middle;
+      width: 70%;
+      padding-left: rem(20px);
+      h3 {
+        font-size: rem(12px);
+        font-family: montserrat;
+        color: $fontblack;
+        text-transform: uppercase;
+        line-height: 1.5;
+        margin-bottom: rem(9px);
+      }
+      p {
+        font-size: rem(15px);
+        font-family: roboto;
+        color: $fontprg;
+      }
+    }
+    @media (max-width: rem(850px)) {
+      width: 60%;
+    }
+    @media (max-width: rem(450px)) {
+      display: block;
+      width: 100%;
+    }
+  }
+  &__right {
+    width: 25%;
+    display: inline-block;
+    padding-left: rem(30px);
+    text-align: left;
+    vertical-align: top;
+    h2 {
+      font-size: rem(14px);
+      font-family: montserrat;
+      color: $fontblack;
+      text-transform: uppercase;
+      font-weight: bold;
+      text-align: top;
+      margin-bottom: rem(39px);
+    }
+
+    img {
+      display: inline-block;
+      width: 32%;
+      margin: rem(1px);
+    }
+    img:nth-child(3n + 1) {
+      margin-left: 0;
+      display: inline-block;
+    }
+    h4 {
+      font-family: roboto;
+      font-style: italic;
+      font-size: rem(13px);
+      font-weight: 300;
+      margin-top: rem(19px);
+    }
+    @media (max-width: rem(850px)) {
+      width: 40%;
+    }
+    @media (max-width: rem(450px)) {
+      display: block;
+      width: 100%;
+    }
+  }
+  @media (max-width: rem(850px)) {
+    text-align: left;
+  }
+}

@@ -1,0 +1,128 @@
+.blog {
+  font-size: 0;
+  box-sizing: border-box;
+
+  &__header {
+    @include pgheader;
+    margin-top: rem(100px);
+    margin-bottom: rem(50px);
+  }
+  &__block {
+    @include block;
+    margin: rem(15px) auto;
+  }
+
+  //   BLOG BODY SECTION   //
+  &__body {
+    @include layout;
+    margin-bottom: rem(100px);
+
+    &--card {
+      width: rem(380px);
+      display: inline-block;
+      text-align: left;
+      margin-left: rem(30px);
+      &:first-child {
+        margin-left: 0;
+      }
+      #picture1 {
+        background-image: url(/assets/img/picture1.png);
+      }
+      #picture2 {
+        background-image: url(/assets/img/picture2.png);
+      }
+      #picture3 {
+        background-image: url(/assets/img/picture3.png);
+      }
+      // picture parametres //
+      div {
+        width: rem(380px);
+        height: rem(240px);
+        position: relative;
+        span {
+          width: rem(60px);
+          height: rem(70px);
+          background-color: $bg-blue;
+          position: absolute;
+          bottom: rem(10px);
+          left: rem(-10px);
+        }
+        h5 {
+          font-size: rem(30px);
+          font-family: montserrat;
+          font-weight: bold;
+          color: $fontwhite;
+          margin-top: rem(15px);
+          margin-left: rem(15px);
+        }
+        h6 {
+          font-size: rem(15px);
+          font-family: roboto;
+          font-weight: 300;
+          font-style: italic;
+          color: $fontwhite;
+          margin-top: rem(7px);
+          margin-left: rem(19px);
+        }
+      }
+      h3 {
+        font-size: rem(14px);
+        font-family: montserrat;
+        font-weight: 400;
+        color: $fontblack;
+        margin: rem(20px) 0;
+        text-transform: uppercase;
+      }
+      h4 {
+        font-size: rem(15px);
+        font-family: roboto;
+        font-weight: 400;
+        color: $fontprg;
+        border-bottom: 1px solid $bg-lgrey;
+        padding-bottom: rem(23px);
+      }
+      p {
+        font-size: rem(15px);
+        font-family: roboto;
+        font-weight: 400;
+        color: $fontprg;
+        margin: rem(20px) rem(20px) rem(10px) 0;
+        display: inline-block;
+      }
+      i {
+        font-size: rem(15px);
+        color: $bg-blue;
+        margin-right: rem(6px);
+        display: inline-block;
+      }
+      @media (max-width: rem(1199px)) {
+        display: block;
+        margin: 0 auto;
+        &:first-child {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+
+  // OPEN MAP GAP //
+  &__map {
+    background-image: url(/assets/img/map.png);
+    background-repeat: no-repeat;
+    text-align: center;
+    padding-bottom: rem(60px);
+    i,
+    h3 {
+      color: $bg-first;
+      font-size: rem(24px);
+    }
+    h3 {
+      font-family: montserrat;
+      font-weight: bold;
+      margin: rem(20px) 0;
+    }
+    i {
+      margin-top: rem(60px);
+    }
+  }
+}
