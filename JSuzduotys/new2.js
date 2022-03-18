@@ -24,6 +24,24 @@ console.log(penkiVaisiai('obuoliu', 6));
 
   //  2JS 4 uzduotis
 
+var herojai = ['Thor', 'Halk', 'Batman', 'Spiderman'];
+
+ herojai.forEach(element =>{
+  var divas = document.createElement("div");
+  divas.innerText = element;
+  document.body.appendChild(divas);
+  divas.style.display = 'block';
+  divas.style.backgroundColor = 'blue';
+  divas.style.color = 'white';
+  });
+
+
+  // for (let i = 0; i < herojai.length; i + 2) {
+  //   divas.style.backgroundColor = 'white';
+  //   divas.style.color = 'black';
+  //   "<br>";
+  // };
+ 
 
 
 
