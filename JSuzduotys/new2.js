@@ -26,22 +26,17 @@ console.log(penkiVaisiai('obuoliu', 6));
 
 var herojai = ['Thor', 'Halk', 'Batman', 'Spiderman'];
 
- herojai.forEach(element =>{
+herojai.forEach((item, index) => {
   var divas = document.createElement("div");
-  divas.innerText = element;
+  divas.innerText = item;
   document.body.appendChild(divas);
-  divas.style.display = 'block';
-  divas.style.backgroundColor = 'blue';
-  divas.style.color = 'white';
-  });
+  if (index % 2) {
+    divas.style.backgroundColor = 'blue';
+    divas.style.color = 'white';
+  }
+});
 
 
-  // for (let i = 0; i < herojai.length; i + 2) {
-  //   divas.style.backgroundColor = 'white';
-  //   divas.style.color = 'black';
-  //   "<br>";
-  // };
- 
 
 
 
