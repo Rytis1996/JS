@@ -19,7 +19,3 @@ function futbolistas(greitis, vardas, pavarde, ugis, amzius, ypatybes) {
 //   console.log(komanda);
 //   document.getElementById("teamas").innerHTML = komanda;
 //   document.getElementById("teamas").innerHTML = zaidejas1;
-
-
-
-
