@@ -37,23 +37,6 @@ komanda.forEach((item, index) => {
 
   //  UZDUOTIS NR2
 
-  // Masinu objekto konstruktorius
-  function masina(pavadinimas, laikas, kelias, keliasPerValanda) {
-    this.pavadinimas = pavadinimas;
-    this.laikas = laikas;
-    this.kelias = kelias;
-    this.keliasPerValanda =   function keliasPerValanda() {
-      var keliasPerValanda = this.kelias / this.laikas;
-      return keliasPerValanda;
-    };
-  };
-
-// kelias per valanda
-  // function keliasPerValanda(laikas, kelias) {
-  //   var keliasPerValanda = kelias / laikas;
-  //   return keliasPerValanda;
-  // };
-
   // mygtuko sukurimas
   var mygtukas = document.createElement("button");
   document.body.appendChild(mygtukas);
@@ -66,34 +49,47 @@ komanda.forEach((item, index) => {
   masinos5.style.margin = '0 auto';
   masinos5.style.display = 'block';
 
-
+  // Masinu objekto konstruktorius
+  function masina(pavadinimas, laikas, kelias, keliasLaikas) {
+    this.pavadinimas = pavadinimas;
+    this.laikas = laikas;
+    this.kelias = kelias;
+    this.keliasLaikas = keliasLaikas;
+  };
+ 
 // Ivarikius pavadinimai ir parametrai
 var masinuPav = ['opel', 'audi', 'bmw', 'mazda', 'reno', 'volvo', 'toyota', 'subaru', 'ford', 'fiat', 'tesla'];
 var pavadinimas = masinuPav[Math.floor(Math.random() * masinuPav.length)];
 var laikas = Math.floor(Math.random() * (2990 - 30) + 30);
 var kelias = Math.floor(Math.random() * (200000 - 120000) + 120000);
 
-// masinu masyvas
+// kelias per valanda
+  var keliasPerValanda = function keliasPerValanda(kelias, laikas) {
+  var keliasPerValanda = kelias / laikas;
+  return keliasPerValanda;
+};
+ var keliasLaikas = keliasPerValanda(kelias, laikas);
+// Masinu masyvas
 var masinos = [masina0, masina1, masina2, masina3, masina4];
-var masina0 = new masina('pavadinimas', 'laikas', 'kelias');
-var masina1 = new masina('pavadinimas', 'laikas', 'kelias');
-var masina2 = new masina('pavadinimas', 'laikas', 'kelias');
-var masina3 = new masina('pavadinimas', 'laikas', 'kelias');
-var masina4 = new masina('pavadinimas', 'laikas', 'kelias');
+var masina0 = new masina(pavadinimas, laikas, kelias, keliasLaikas);
+var masina1 = new masina(pavadinimas, laikas, kelias, keliasLaikas);
+var masina2 = new masina(pavadinimas, laikas, kelias, keliasLaikas);
+var masina3 = new masina(pavadinimas, laikas, kelias, keliasLaikas);
+var masina4 = new masina(pavadinimas, laikas, kelias, keliasLaikas);
+
+
+
 
 console.log(masinos);
 
-  // mygtukas.addEventListener('click', function(){
-  //   var divas = document.createElement("div");
-  //   var newMasina = new masina(pavadinimas, laikas, kelias, keliasPerValanda) * 5;
-
-  //   masinos.push(newMasina);
-
-  //   masinos.forEach((item, index) => {
-
-  //   })
-  //   document.body.appendChild(divas);
-  // });
+  mygtukas.addEventListener('click', function(){
+    var divas = document.createElement("div");
+    masinos.forEach((item, index) => {
+      console.log(masinos[index.pavadinimas]);
+      divas.innerHTML = masinos[index].pavadinimas + "," + masinos[index].laikas + "," + masinos[index].kelias + "," + masinos[index].keliasLaikas;
+      document.body.appendChild(divas);
+    })
+  });
 
 
 
